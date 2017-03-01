@@ -64,3 +64,4 @@ st.stem(w.decode('utf-8'))
 >>> from nltk.stem.snowball import SnowballStemmer
 >>> stemmer = SnowballStemmer("english")
 >>> print(stemmer.stem("running"))
+```
