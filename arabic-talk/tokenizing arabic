@@ -1,0 +1,29 @@
+tokenize arabic
+================================
+
+tokenization is the process of breaking a stream of text up into words, phrases, symbols, or other meaningful elements called tokens. 
+
+PunctWordTokenizer is trained on more variety of text, but I find that it's less predictable than the rest of them, which use regular expressions, making them usable on any
+language, with predictable results
+
+```python
+from nltk.tokenize import wordpunct_tokenize
+sen = u" في_بيتنا كل شي لما تحتاجه يضيع ...ادور على شاحن فجأة يختفي ..لدرجة اني اسوي نفسي ادور شيء"
+
+>>> wordpunct_tokenize(sen)
+[u'\u0641\u064a_\u0628\u064a\u062a\u0646\u0627', u'\u0643\u0644', u'\u0634\u064a', u'\u0644\u0645\u0627', u'\u062a\u062d\u062a\u0627\u062c\u0647', u'\u064a\u0636\u064a\u0639', u'...', u'\u0627\u062f\u0648\u0631', u'\u0639\u0644\u0649', u'\u0634\u0627\u062d\u0646', u'\u0641\u062c\u0623\u0629', u'\u064a\u062e\u062a\u0641\u064a', u'..', u'\u0644\u062f\u0631\u062c\u0629', u'\u0627\u0646\u064a', u'\u0627\u0633\u0648\u064a', u'\u0646\u0641\u0633\u064a', u'\u0627\u062f\u0648\u0631', u'\u0634\u064a\u0621']
+>>>
+
+```
+
+
+
+```python
+>>> text = u"العربية لغة جميلة."
+>>> tokens = araby.tokenize(text)
+>>> print u"\n".join(tokens)
+‎العربية
+‎لغة
+‎جميلة
+.
+```
